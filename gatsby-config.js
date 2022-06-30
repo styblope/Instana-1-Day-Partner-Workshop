@@ -24,8 +24,8 @@ module.exports = {
         mediumAccount: 'carbondesign',
         repository: {
           baseUrl:
-            'https://github.com/carbon-design-system/gatsby-theme-carbon',
-          subDirectory: '/packages/example',
+            'https://github.com/dugslade/Instana-1-Day-Partner-Workshop',
+          subDirectory: '/',
         },
       },
     },
