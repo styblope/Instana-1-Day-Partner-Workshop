@@ -1,0 +1,58 @@
+
+## Step 1: 
+All Students should have received an e-mail inviting them to join the Instana partner tenant. 
+
+![Large blocky illustration](/images/1.1.png)
+
+You will have access to both the Demo and Sandbox Instana. 
+
+For the Labs we will be accessing the Sandbox instance. 
+
+Launch the Sandbox Instana Portal from the browser: https://sandbox-partner.instana.io 
+
+Your screen will look like this: 
+
+![Large blocky illustration](/images/1.2.png)
+
+## Step 2:
+
+![Large blocky illustration](/images/1.3.png)
+
+## Step 3:
+
+![Large blocky illustration](/images/1.4.png)
+
+## Step 4:
+
+SSH into the training host that has been provided as “ubuntu” (your instructor will provide a host IP address and password).
+
+```
+ssh ubuntu@<IP address>
+```
+
+Paste the CURL statement that you copied in the last step into your terminal window and hit enter. 
+You should see a screen that will look similar to the one below. Please enter “y” and hit enter. This will  start the installation process.
+
+![Large blocky illustration](/images/1.5.png)
+
+## Step 5:
+
+Once the installation is complete, we need to validate that our work has been successful. 
+To accomplish this, we will want to navigate to the Infrastructure page of the Instana UI. 
+
+Note: You may need to refresh and give it a minute. 
+
+![Large blocky illustration](/images/1.6.png)
+
+When in the infrastructure map section, we will see an open text field. 
+We are using DFQ or “Dynamic Focus Query” to filter the content on the screen. 
+
+In this scenario, we will use DFQ to filter on our host using:
+
+```
+entity.host.name:<your host name> 
+```
+
+![Large blocky illustration](/images/1.7.png)
+
+If you see your host in the map, you have validated that the installation was successful. 

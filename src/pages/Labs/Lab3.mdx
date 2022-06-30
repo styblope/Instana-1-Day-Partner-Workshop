@@ -1,0 +1,49 @@
+
+In this lab we will configure:
+
+Custom Tabs – enable searching and filtering of tags in the UI
+
+Custom Zone – where hosts are grouped into zones on the infrastructure map
+
+![Large blocky illustration](/images/3.1.png)
+
+## Step 1:
+
+SSH into your host and navigate to the directory:
+
+```
+/opt/instana/agent/etc/instana 
+```
+
+## Step 2:
+
+Create a configuration-custom.yaml file. 
+
+Copy the appropriate blocks from the configuration.yaml file to your new file.
+
+```
+sudo cp configuration.yaml configuration-custom.yaml 
+```
+
+## Step 3:
+Using the vi commands, look for the following sections within the configuration-custom.yaml file and make the following changes: 
+
+![Large blocky illustration](/images/3.2.png)
+
+Note: 
+
+Be wary of spacing. Yaml requires 2 space indentation. 
+
+Also, check that the changes are uncommented in the yaml file.
+
+Once these values have been modified, please save your work. 
+
+## Step 4:
+
+Validate that your work was successful by viewing your host in the Instana UI. 
+Click on your host on the Infrastructure map and it will bring up details: 
+
+![Large blocky illustration](/images/3.3.png)
+
+
+
