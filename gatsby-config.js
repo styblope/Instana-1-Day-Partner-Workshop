@@ -4,8 +4,7 @@ module.exports = {
     description: 'A Gatsby theme for the carbon design system',
     keywords: 'gatsby,theme,carbon',
   },
- // pathPrefix: `/gtc`,
-  pathPrefix: "/Instana-1-Day-Partner-Workshop",
+  pathPrefix: `/gtc`,
   plugins: [
     {
       resolve: 'gatsby-plugin-manifest',
@@ -31,5 +30,5 @@ module.exports = {
       },
     },
   ],
-//  pathPrefix: "/Instana-1-Day-Partner-Workshop",
+  pathPrefix: "/Instana-1-Day-Partner-Workshop",
 };
