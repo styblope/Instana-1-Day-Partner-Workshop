@@ -30,5 +30,5 @@ module.exports = {
       },
     },
   ],
-  pathPrefix: '/Instana_Public_Workshop',
+  pathPrefix: "/Instana_Public_Workshop",
 };
