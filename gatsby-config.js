@@ -24,7 +24,7 @@ module.exports = {
         mediumAccount: 'carbondesign',
         repository: {
           baseUrl:
-            'https://github.com/dugslade/Instana-1-Day-Partner-Workshop',
+            'https://github.com/ibm-bp-tech/Instana-1-Day-Partner-Workshop',
           subDirectory: '/',
         },
       },
