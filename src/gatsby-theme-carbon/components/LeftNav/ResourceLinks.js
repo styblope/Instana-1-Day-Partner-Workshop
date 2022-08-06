@@ -16,7 +16,7 @@ const links = [
     href: 'https://www.ibm.com/cloud/aiops',
   },
   {
-    title: 'Instana PTEG - Tech Guide',
+    title: 'Instana PTEG - Partner Enablement',
     href: 'https://ibm.seismic.com/Link/Content/DCqJR68b93JQRG7WcMHQ39hBT3p3',
   },
   {
