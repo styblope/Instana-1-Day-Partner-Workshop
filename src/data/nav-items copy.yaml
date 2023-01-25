@@ -3,8 +3,6 @@
     - path: /SalesEnablement/sales
 - title: Technical Labs
   pages:
-    - title: Lab Environment
-      path: /Labs/Env
     - title: Lab 1 - Agent Installation
       path: /Labs/Lab1
     - title: Lab 2 - Agent Troubleshooting
