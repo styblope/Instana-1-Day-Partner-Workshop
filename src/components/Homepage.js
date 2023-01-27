@@ -9,7 +9,7 @@ const FirstLeftText = () => <p>IBM Observability by Instana</p>;
 
 const FirstRightText = () => (
   <p>
-    Learn about IBM's Instana. This site contains example labs, tutorials, and partner instructions.
+    Learn about IBM's Instana. This site contains presentations, tutorials, and partner technical labs.   
   </p>
 );
 
