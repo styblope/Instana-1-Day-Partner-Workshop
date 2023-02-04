@@ -1,7 +1,7 @@
 - title: Agenda
   pages:
     - path: /Agenda/agenda
-- title: Introduction to Instana
+- title: Overview and Presentations
   pages:
     - path: /SalesEnablement/sales
 - title: Technical Labs
@@ -28,7 +28,7 @@
       path: /Labs/Lab9
     - title: Reference - vi Editor
       path: /Labs/vi
-
-- title: Instructor Setup Instructions
+  hasDivider: true
+- title: Instructor Lab Setup Information
   pages:
     - path: /SetupInstructions/setup
