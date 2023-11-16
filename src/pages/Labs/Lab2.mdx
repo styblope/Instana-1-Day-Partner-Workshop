@@ -17,7 +17,7 @@ In this lab you will be focusing on Linux deployments of the Instana agent. You 
 We will SSH into the machine that was provided to us. Agent logs are located at:
 
 ```
-/opt/instana/agent/data/log
+cd /opt/instana/agent/data/log
 ```
 
 In the event that there is an issue, this would be where we would pull our logfiles. 
@@ -42,7 +42,7 @@ We can then validate that the service has stopped by entering:
 sudo service instana-agent status
 ```
 
-Hint: type “q” to exit status command.
+Hint: type “:q” to exit status command.
 
 ![Lab 2](images/2.3.png)
 
@@ -62,7 +62,7 @@ Check to make sure files are deleted.
 To set the log level to debug, first browse to 
 
 ```
-/opt/instana/agent/etc
+cd /opt/instana/agent/etc
 ```
 
 We will be editing org.ops4j.pax.logging.cfg using the vi editor.
@@ -100,10 +100,10 @@ sudo service instana-agent status
 
 ## Step 6:
 
-Verify logging is now at Debug by viewing the
+Verify logging is now at Debug by viewing the agent.log file after navigating to
 
 ```
-/opt/instana/agent/data/log
+cd /opt/instana/agent/data/log
 ```
 
 Feel free to revert the log level to INFO if you'd like.
