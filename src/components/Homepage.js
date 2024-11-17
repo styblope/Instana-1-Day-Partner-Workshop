@@ -33,7 +33,7 @@ const customProps = {
   Banner: <HomepageBanner renderText={BannerText} image={Carbon} />,
   FirstCallout: (
     <HomepageCallout
-      backgroundColor="#030303"
+      //backgroundColor="#030303"
       color="white"
       leftText={FirstLeftText}
       rightText={FirstRightText}

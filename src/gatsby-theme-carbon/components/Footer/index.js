@@ -8,10 +8,10 @@ const Content = ({ buildTime }) => (
 
 const links = {
   firstCol: [
-    { href: 'https://www.ibm.com/cloud/instana', linkText: 'IBM Observability by Instana APM' }
+    { href: 'https://www.ibm.com/products/instana', linkText: 'IBM Observability by Instana APM' }
   ],
   secondCol: [
-    { href: 'https://www.ibm.com/cloud/aiops', linkText: 'IBM AIOps' }
+    { href: 'https://www.ibm.com/aiops', linkText: 'IBM AIOps' }
     ],
 };
 

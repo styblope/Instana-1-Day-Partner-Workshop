@@ -6,7 +6,6 @@ const links = [
     title: 'Instana Site',
     href: 'https://www.ibm.com/cloud/instana',
   },
-
   {
     title: 'Instana Documentation',
     href: 'https://www.ibm.com/docs/en/obi/current',

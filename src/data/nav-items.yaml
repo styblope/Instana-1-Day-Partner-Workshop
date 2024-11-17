@@ -28,7 +28,7 @@
       path: /Labs/Lab9
     - title: Reference - vi Editor
       path: /Labs/vi
-  hasDivider: true
-- title: Instructor Lab Setup Information
-  pages:
-    - path: /SetupInstructions/setup
+  # hasDivider: true
+# - title: Instructor Lab Setup Information
+  # pages:
+    # - path: /SetupInstructions/setup
