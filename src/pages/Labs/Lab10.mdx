@@ -69,14 +69,14 @@ com.instana.plugin.httpd:
     autoRestart: true
 ```
 
-## Step 2: PHP monitoring
+## Step 3: PHP monitoring
 
 PHP monitoring is covered in [the corresponding section](https://www.ibm.com/docs/en/instana-observability/current?topic=technologies-monitoring-php) of the manual.
 
 In our case of Apache2 with mod_php there is virtually no configuration needed. PHP tracing is enabled by default.
 
 
-## Step 3: MySQL monitoring
+## Step 4: MySQL monitoring
 
 Locate your VM in the Instana Infrastructure view and open the MySQL DB dashboard
 
@@ -117,4 +117,10 @@ SET GLOBAL innodb_monitor_enable = 'trx_nl_ro_commits';
 SET GLOBAL innodb_monitor_enable = 'trx_ro_commits';
 SET GLOBAL innodb_monitor_enable = 'trx_rollbacks';
 SET GLOBAL innodb_monitor_enable = 'trx_rw_commits';
+```
+
+## Step 5: Uninstall the LAMP stack
+
+```sh
+ansible-playbook lamp-remove.yml
 ```

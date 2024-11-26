@@ -79,3 +79,14 @@ You can exit and SSH into machine again and verify ubuntu password works.
 
 - ssh ubuntu@(machine ip)
 
+## Step 4: LAMP stack monitoring
+
+Copy these Ansible files to the VMs into the default user home directory.
+- [lamp-install.yml](https://raw.githubusercontent.com/styblope/Instana-1-Day-Partner-Workshop/refs/heads/main/files/lamp-install.yml)
+- [lamp-remove.yml](https://raw.githubusercontent.com/styblope/Instana-1-Day-Partner-Workshop/refs/heads/main/files/lamp-remove.yml)
+
+Install Ansible on the machines
+```sh
+apt-get install -y ansible
+```
+
