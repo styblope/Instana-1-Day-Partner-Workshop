@@ -1,0 +1,122 @@
+---
+- name: Tear Down LAMP Stack Playbook
+  hosts: localhost
+  connection: local
+  gather_facts: yes
+  vars:
+    db_name: "testdb"
+    db_user: "testuser"
+
+  tasks:
+    - name: Stop and disable Apache service
+      ansible.builtin.service:
+        name: apache2
+        state: stopped
+        enabled: no
+      become: yes
+
+    - name: Remove Apache package
+      ansible.builtin.apt:
+        name: apache2
+        state: absent
+        purge: true
+      become: yes
+
+    - name: Remove PHP and related packages
+      ansible.builtin.apt:
+        name:
+          - php
+          - libapache2-mod-php*
+          - php-mysql
+        purge: true
+        state: absent
+      become: yes
+
+    - name: Remove test database
+      mysql_db:
+        name: "{{ db_name }}"
+        state: absent
+        login_unix_socket: /var/run/mysqld/mysqld.sock
+      become: yes
+ 
+    - name: Remove test database user
+      mysql_user:
+        name: "{{ db_user }}"
+        state: absent
+        login_unix_socket: /var/run/mysqld/mysqld.sock
+      become: yes
+
+    - name: Stop and disable MySQL service
+      ansible.builtin.service:
+        name: mysql
+        state: stopped
+        enabled: no
+      become: yes
+
+    - name: Remove MySQL package
+      ansible.builtin.apt:
+        name:
+          - mysql-server*
+          - python3-pymysql*
+        purge: true
+        state: absent
+      become: yes
+
+    - name: Remove test PHP file
+      ansible.builtin.file:
+        path: /var/www/html/test.php
+        state: absent
+      become: yes
+
+    - name: Clean up Apache configuration
+      ansible.builtin.lineinfile:
+        path: /etc/apache2/ports.conf
+        regexp: '^Listen 8000'
+        state: absent
+      become: yes
+
+    - name: Clean up Apache virtual host configuration
+      ansible.builtin.lineinfile:
+        path: /etc/apache2/sites-available/000-default.conf
+        regexp: '^<VirtualHost \*:8000>'
+        state: absent
+      become: yes
+
+      #    - name: Remove UFW rule for port 8000
+      #      ansible.builtin.ufw:
+      #        rule: deny
+      #        port: 8000
+      #        proto: tcp
+      #        state: absent
+      #      become: yes
+
+      #     - name: Remove MySQL package completely
+      #       ansible.builtin.apt:
+      #         name: mysql-server
+      #         state: absent
+      #         purge: yes
+      #       become: yes
+      # 
+      #     - name: Remove Apache package completely
+      #       ansible.builtin.apt:
+      #         name: apache2
+      #         state: absent
+      #         purge: yes
+      #       become: yes
+
+    - name: Clean up any remaining configuration files
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: absent
+      become: yes
+      with_items:
+        - /etc/apache2
+        - /etc/mysql
+        - /var/www/html
+        - /var/lib/mysql*
+
+    - name: Autoremove unused packages
+      ansible.builtin.apt:
+        autoremove: yes
+      become: yes
+

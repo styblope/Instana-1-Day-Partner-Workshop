@@ -26,6 +26,8 @@
       path: /Labs/Lab8
     - title: Lab 9 - Custom Events
       path: /Labs/Lab9
+    - title: Lab 10 - LAMP Stack Monitoring
+      path: /Labs/Lab10
     - title: Reference - vi Editor
       path: /Labs/vi
   # hasDivider: true
