@@ -1,16 +1,8 @@
 let
-  nixpkgs = fetchTarball "https://github.com/NixOS/nixpkgs/tarball/nixos-24.05";
-  pkgs = import nixpkgs { config = {}; overlays = []; };
+  pkgs = import <nixpkgs> {};
 in
-
-pkgs.mkShellNoCC {
+  pkgs.mkShellNoCC {
     packages = with pkgs; [
       nodejs
     ];
-
-    # GREETING = "Hello, Nix!";
-
-    shellHook = ''
-      # echo $GREETING | cowsay | lolcat
-    '';
   }
